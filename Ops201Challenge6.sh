@@ -22,4 +22,4 @@ fi
     read -p "any more file to create:" fileContinue
 done
 # extremely lost at this point as im getting errors i cant identify. Thought I had this one.
-# thanks to my accoutability buddies for the teamworkj and help
+# thanks to my accountability buddies for the teamwork and help
