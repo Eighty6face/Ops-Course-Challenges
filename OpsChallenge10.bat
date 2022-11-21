@@ -19,6 +19,13 @@ Start-Process -file iexplore "https://owasp.org/www-project-top-ten/"
 
 :: Start the process Internet Explorer (iexplore.exe) ten times using a for loop. Have each instance open https://owasp.org/www-project-top-ten/.
 :: Couldnt get for loop to work and made my PC freeze twice. WIll wait for explanation 
+$T=Start-Process -FilePath iexplore -ArgumentList '--new-window https://owasp.org/www-project-top-ten/.'
+ for ($i=1 -eq 10:$i++)
+    {
+        $T
+        Echo $1
+        Start-Sleep -milliseconds 250
+    }
 
 
 :: Close all Internet Explorer windows
