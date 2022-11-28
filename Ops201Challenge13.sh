@@ -7,44 +7,48 @@
 
 
   # Create a script that asks a user to type a domain, then displays information about the typed domain. 
-    # Operations that must be used include:
-        # whois
-        # dig
-        # host
-        # nslookup
+        # Operations that must be used include:
+        	 # whois
+       		 # dig
+        	 # host
+		 # nslookup
         
-# Reference sites below:
+# Reference 
 	# https://www.howtogeek.com/680086/how-to-use-the-whois-command-on-linux/
-	# Catherines Mom (MIL) lol
+	# https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html
+	# https://linuxconfig.org/bash-script-while-loop-examples
+	
 
-    
-continue_search="X"
 
-function f1 {
+  
+
+function 1 {
     whois $newfile > domainsearch.txt
 }
 
-function f2 {
+function 2{
     dig $newfile > domainsearch.txt
 }
     
-function f3 {
+function 3 {
     host $newfile > domainsearch.txt
 }
 
-function f4 {
+function 4 {
     nslookup $newfile > domainsearch.txt
 }
+
+ontinue_search="X"
 
 while [ $continue_search == "X" ]
 do 
     read -p "Enter domain name to search for (i.e. Google.com):" newfile
-   f1
-   f2
-   f3
-   f4
+   function 1
+   function 2
+   function 3
+   function 4
     read -p "Would you like to create another search? (y/n)" continue_search
     
-done
+    done
 
-echo "Search Complete"
+echo "Complete"
