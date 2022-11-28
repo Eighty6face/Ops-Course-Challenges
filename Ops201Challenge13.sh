@@ -38,7 +38,7 @@ function f4 {
 
 while [ $continue_search == "X" ]
 do 
-    read -p "Enter domain name to search for (i.e. SpeedSociety.com):" newfile
+    read -p "Enter domain name to search for (i.e. Google.com):" newfile
    f1
    f2
    f3
