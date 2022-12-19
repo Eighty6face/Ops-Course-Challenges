@@ -16,21 +16,39 @@
     # Main
 # /var/log/syslog
 # /var/log/wtmp
+ # rm = remove file 
+ # ls -lH 
+ # tilde = ~
+ # tar cfz- Comepresses big file 
 
-# Sets logs as variables
-mkdir /var/log/syslog
-ls -l sysvar=/var/log/syslog
-ls -l wtmpvar=/var/log/wtmp
+ target1=syslog
+ target2=wtmp
 
-# Function to print and delete logs
-# () means command subsitution (geeksforgeeks) 
-deletelog() {              
-  cat $1
-  cat /dev/null/ > $1
-  cat $2
+ backup_folder=~/backups
+
+
+clear_log () {
+    target_size$(stat -c%s /var/log/$1)
+
+# print size before compression
+    echo "the size of $s1 is $target_size"
+
+ #  compress the contents of the log files to a backup directory
+    back_name=$1.$(date +%F%H%M%S).zip
+    zip $backup_folder/$back_name /var/log/$1
+    target_size_compressed=$(stat -c%s $backup_folder/$backup_name)
+
+# clear the log file
+# cat /dev/null > /var/log/$1
+# target_size_afterclearing+$ (stat  ~c%s /var/log/$1)
+    echo "Size of original log: $target_size"
+    echo "Size of compressed log: $target_size_compressed"
+# echo "Size of cleared"
 }
 
-rm $sysvar
-rm $wtmpvar
+clear_log $target1
+clear_log $target2301
+
+
 
 # End
