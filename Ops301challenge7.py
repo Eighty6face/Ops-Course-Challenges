@@ -20,34 +20,34 @@ dirs = "dirs"
 files = "files"
 
 
-### Read user input here into a variable
-dir_func = input("Enter a directory name:")
+    ### Read user input here into a variable
+dir = input(" Enter a directory name: ")
 
-# Declaration of functions
-def dir_func(print):
+    # Declaration of functions
+def os_walk_target(target_arg):
 
-### Declare a function here
+    ### Declare a function here
 
-    for (root, dirs, files) in os.walk("dir_func"):
+    for (root, dirs, files) in os.walk(target_arg):
 
      ### Add a print command here to print ==root==
         # print(" + root + ")---didnt work
-        val = input("root")
-        print("root")
+        print(root)
 
     ### Add a print command here to print ==dirs==
         # print(" + dirs + ")---didnt work
-        val = input("dirs")
-        print("dirs")
+        # val = input("dirs")--- didnt work
+        print(dirs)
 
     ### Add a print command here to print ==files==
         #print(" + files + ")---didnt work
-        val = input("files")
-        print("files")
+        # val = input("files")--- didnt work
+        print(files)
 
-dir_func(root)
-dir_func(dirs)
-dir_func(files)
+    # dir_func(root)---unneeded 
+    # dir_func(dirs)----unneeded
+    # dir_func(files)----unneeded
+os_walk_target(dirs) 
 
 # Main
 
