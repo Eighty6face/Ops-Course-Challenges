@@ -5,7 +5,7 @@
 
     #Task
         # Assign to a variable a list of ten string elements.------!
-        # Print the fourth element of the list.--------------------!
+        # Assign to a variable a list of ten string elements.------!
         # Print the sixth through tenth element of the list.-------!
         # Change the value of the seventh element to "onion".------!
 
@@ -14,13 +14,17 @@
 
 
 # Main
-
+    # Assign to a variable a list of ten string elements.------!
 Avengers = ['Captain America', 'Hulk', 'Antman', 'Ironman', 'Thor', 'Captain Marvel', 'Hawkeye', 'Blackwidow', 'War Machine', 'Black Panther']
 
+    # Assign to a variable a list of ten string elements.------!
 print(Avengers[3])
-print(Avengers[5:9])
-Avengers[6] = "Onion"
 
+    # Print the sixth through tenth element of the list.-------!
+print(Avengers[5:10])
+
+    # Change the value of the seventh element to "onion".------!
+Avengers[6] = "Onion"
 print(Avengers)
 
 # End 
