@@ -73,8 +73,10 @@ elif a == b:
 print("\n6.a >= b")
 if a >= b:
     print("yes")
-elif a >= b:
+elif a != b:
     print("no")
+else:
+    ("no clear answer")
 
 # couldnt get the elif with else to work.
 
