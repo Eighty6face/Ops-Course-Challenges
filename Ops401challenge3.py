@@ -13,6 +13,11 @@
     # Note to self: First portion was too simple, However due to injury Ive been able to take notes and configure and "Complicate"the code
     # "continued" I have used a VM (win10)for the local IPV4 as to hopefully run into issue and take the hardway out instead of 8.8.8.8
 
+    
+    # NOTE TO GRADER-----MY VS CODE KEPT GIVING ME ERRNO2 and wouldnt execute the code. as a CITATION i rewatched the class a few times and did my best to plug and play.
+    # (Cont-) Once i figure out the issue I will try it but needed to get this turned in.
+
+
 # Main
 
     # import libraries
@@ -22,9 +27,13 @@ import os
 import smtplib
 from getpass import getpass
         # decouple from class 4 listening to Ben and Kevin speak on it 
+
 from decouple import config
 
     # Define variables
+
+
+
 
 # Ask for input from the user
 def send_email():
@@ -40,6 +49,7 @@ email = smtplib.SMTP('smtp.gmail.com', 465)
 email.starttls()
 username = config('username', default='')
 password = config('password', default='')
+
 email.login(username, password)
 
 message = os.system("ping -c 1 10.0.2.15")
