@@ -84,3 +84,18 @@ if __name__ == "__main__":
         print("Positive detection: Vulnerability found.")
     else:
         print("Negative detection: No vulnerability found.")
+
+
+# POSITIVE
+#  /bin/python3 /home/eighty6face/Ops-Course-Challengeighty6face@eighty6face:~/Ops-Course-Challenges$ /bin/python3 /home/eighty6face/Ops-Course-Challenges/Ops401challenge38.py
+Enter a URL to test for XSS:https://xss-game.appspot.com/level1/frame
+[+] Detected 1 forms on https://xss-game.appspot.com/level1/frame.
+[+] XSS Detected on https://xss-game.appspot.com/level1/frame
+[*] Form details:
+{'action': '',
+ 'inputs': [{'name': 'query',
+             'type': 'text',
+             'value': "<script>alert('XSS');</script>"},
+            {'name': None, 'type': 'submit'}],
+ 'method': 'get'}
+Positive detection: Vulnerability found.
